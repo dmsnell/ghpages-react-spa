@@ -1,4 +1,4 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: __dirname + '/index.jsx',
@@ -15,9 +15,9 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [new HtmlWebpackPlugin({
-		title: 'ghpages-react-spa'
-	})],
+	plugins: [
+		new HtmlWebpackPlugin( { title: 'ghpages-react-spa' } )
+	],
 	resolve: {
 		modulesDirectories: [ 'client', 'node_modules' ],
 		extensions: ['', '.js', '.jsx']

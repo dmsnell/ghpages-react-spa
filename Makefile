@@ -25,7 +25,7 @@ clean:
 distclean: clean
 	@rm -rf node_modules
 
-index.html: clean node_modules
+index.html: node_modules
 ifeq ($(NODE_ENV), development)
 	@$(WEBPACK) -d --config webpack.config.js
 else
