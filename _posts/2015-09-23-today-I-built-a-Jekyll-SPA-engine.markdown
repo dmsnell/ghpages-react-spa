@@ -13,6 +13,9 @@ Why not just run a simpler app on GitHub Pages? Well, for one this there's plent
 
 It's working quite well. There was [one other blog][gh-react-blog] that I found doing something like this, but the author was building the [page content itself as JSX components][blog-as-jsx], stripping away lots of the flexibility that Jekyll-as-a-JSON-service can offer.
 
+Code on [GitHub][this-project]
+
 [c4t]: http://codefortucson.org
 [gh-react-blog]: http://keithy.me/#/projects
 [blog-as-jsx]: https://github.com/keithyong/keithyong.github.io/blob/master/src/js/About.jsx
+[this-project]: https://github.com/dmsnell/ghpages-react-spa
