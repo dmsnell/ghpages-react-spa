@@ -8,6 +8,8 @@ url: http://grs.xkq.io
 twitter_username: dmsnell23
 github_username:  dmsnell
 
+permalink: /:year/:month/:title
+
 # Build settings
 markdown: kramdown
 production: true

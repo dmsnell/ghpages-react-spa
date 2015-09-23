@@ -29,7 +29,7 @@ index.html: node_modules
 ifeq ($(NODE_ENV), development)
 	@$(WEBPACK) -d --config webpack.config.js
 else
-	@$(WEBPACK) -p --config webpack.config.js
+	@$(WEBPACK) -p --optimize-dedupe --config webpack.config.js
 endif
 
 node_modules: package.json

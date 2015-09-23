@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
 	entry: __dirname + '/index.jsx',
@@ -16,7 +17,10 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new HtmlWebpackPlugin( { title: 'ghpages-react-spa' } )
+		new HtmlWebpackPlugin( { title: 'ghpages-react-spa' } ),
+		new webpack.ProvidePlugin({
+			'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+		}),
 	],
 	resolve: {
 		modulesDirectories: [ 'client', 'node_modules' ],

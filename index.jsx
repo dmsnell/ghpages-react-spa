@@ -6,13 +6,15 @@ const history = createHistory( { queryKey: false } );
 
 import App from 'app';
 import ErrorPage from 'error-page';
-import Layout from 'layout';
+import Layout from 'layout'
+import Post from 'components/post';
 
 React.render( (
 	<Router history={ history }>
 		<Route path="/" component={App}>
 			<IndexRoute component={Layout} />
-			<Route path="*" component={ErrorPage}/>
+			<Route path="/:year/:month/:title" component={Post} />
+			<Route path="*" component={ErrorPage} />
 		</Route>
 	</Router>
 ), document.body );
