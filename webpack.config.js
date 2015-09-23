@@ -1,16 +1,15 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	entry: __dirname + '/index.js',
+	entry: __dirname + '/index.jsx',
 	output: {
 		path: __dirname,
-		filename: 'index.min.js',
-		hash: true
+		filename: 'index.min.js'
 	},
 	module: {
 		loaders: [
 			{
-				test: /\.js$/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader'
 			}
@@ -20,6 +19,7 @@ module.exports = {
 		title: 'ghpages-react-spa'
 	})],
 	resolve: {
+		modulesDirectories: [ 'client', 'node_modules' ],
 		extensions: ['', '.js', '.jsx']
 	},
 	devtool: 'sourcemap'
