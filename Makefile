@@ -16,6 +16,10 @@ NODE_ENV ?= development
 run: build
 	@jekyll serve --config _config.yml,_config_local.yml --baseurl '' --watch --verbose
 
+dev:
+	@jekyll serve --config _config.yml,_config_local.yml --baseurl '' --watch --verbose &
+	@webpack-dev-server --config webpack.config.hot.js --hot --progress --inline --port 4001 --history-api-fallback
+
 build: node_modules index.html
 	@jekyll build --config _config.yml,_config_local.yml --verbose
 
@@ -24,6 +28,7 @@ clean:
 
 distclean: clean
 	@rm -rf node_modules
+	@rm -rf _site
 
 index.html: node_modules
 ifeq ($(NODE_ENV), development)
